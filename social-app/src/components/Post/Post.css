@@ -1,0 +1,77 @@
+.Post{
+    width: 100%;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    box-shadow: 0px 0px 16px -8px rgba(0, 0, 0, 0.68);
+    margin: 30px 0;
+}
+.PostWrapper{
+    padding:10px;
+}
+.PostTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PostTopLeft{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.PostProfileImg{
+    height: 32px;
+    width: 32px;
+    border-radius:50%;
+    object-fit: cover;
+}
+.PostUserName{
+    font-size: 15px;
+    font-weight: 500;
+    margin:0 10px;
+}
+.PostData{
+    font-size: 12px;
+}
+.PostMiddle{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin:20px 0;
+
+}
+img{
+    max-height: 500px;
+     margin-top: 20px;
+    object-fit: contain;
+}
+.PostBottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.PostBottomLeft{
+   display: flex;
+   align-items: center;
+}
+.PostBottomRight{
+ margin-right: 10px;
+}
+.likeIcon{
+  margin-right: 10px;
+}
+.hearIcon{
+  
+    margin-right: 10px;
+}
+.PostLikeCounter{
+    margin-top: 15px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color:#f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(179, 179, 179);
+  }
