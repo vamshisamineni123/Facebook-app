@@ -3,8 +3,10 @@ const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const helmet=require('helmet')
-//const userRoute= require("./routes/users");
-const authRoute=require("./routes/auth");
+const authRoute = require("./routes/auth");
+const userRoute = require("./routes/users");
+const postRoute = require("./routes/posts");
+const categoryRoute = require("./routes/catagories");
 const morgan = require('morgan');
 
 dotenv.config();
@@ -21,12 +23,12 @@ mongoose.connect(process.env.MONGO_URL, {
  app.use(express.json())
 app.use(helmet())
 app.use(morgan("common"))
-//app.use("/api/user",userRoute)
-app.use("/api/auth",authRoute)
+app.use("/api/auth", authRoute);
+app.use("/api/users", userRoute);
+app.use("/api/posts", postRoute);
+app.use("/api/catagories", categoryRoute);
 
-app.get('/ram', (req, res) => {
-  res.send('Hello, world!');
-});
+
 
   app.listen(3000, () => {
     console.log('Server is running on port 3000');
