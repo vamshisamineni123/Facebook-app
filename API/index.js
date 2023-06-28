@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
-helmet=require('helmet')
+const helmet=require('helmet')
 //const userRoute= require("./routes/users");
 const authRoute=require("./routes/auth");
 const morgan = require('morgan');
@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URL, {
 
  app.use(express.json())
 app.use(helmet())
-//app.use(morgan("common"))
+app.use(morgan("common"))
 //app.use("/api/user",userRoute)
 app.use("/api/auth",authRoute)
 
