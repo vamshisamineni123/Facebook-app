@@ -8,8 +8,8 @@ import { LikeIncrement,LikeDecrement,LoveDecrement,LoveIncrement } from '../../r
 
 export default function Post({post}) {
     const like=useSelector((state)=>state.likelove.like);
+    const PF=process.env.REACT_APP_PUBLIC_FOLDER;
    // const {like,setLike}=useState(li)
-    
     const dispacth=useDispatch();
     
     const handleLike=()=>{
@@ -22,7 +22,7 @@ export default function Post({post}) {
             <div className='PostWrapper'>
                 <div className='PostTop'>
                     <div className='PostTopLeft'>
-                        <img className='PostProfileImg' src="../assets/Person/1.jpeg" alt="image is not displayed" />
+                        <img className='PostProfileImg' src={PF+post.photo} alt="image is not displayed" />
                         <span className='PostUserName'>
                             Vamshi Samineni
                         </span>
@@ -35,7 +35,7 @@ export default function Post({post}) {
                 <div className='PostMiddle'>
                     <span className='PostMiddleText'>{post.desc}</span>
                     
-                    <img className="img" src={"../"+post.photo} alt="Image should be aithey dispalyed" />
+                    <img className="img" src={PF+post.photo} alt="it should be image over here" />
                 </div>
                 <div className='PostBottom'>
                     <div className="PostBottomLeft">

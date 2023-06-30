@@ -5,6 +5,7 @@ import Feed from "../../components/Feed/Feed";
 import Rightbar from "../../components/RightBar/RightBar";
 
 export default function Profile() {
+    const PF = process.env.REACT_APP_PUBLIC_FOLDER;
     return (
         <>
             <Topbar />
@@ -15,13 +16,13 @@ export default function Profile() {
                         <div className="profileCover">
                             <img
                                 className="profileCoverImg"
-                                src="../assets/post/3.jpeg"
-                                alt=""
+                                src={PF + "/post/3.jpeg"}
+                                alt="hi bro"
                             />
                             <img
                                 className="profileUserImg"
-                                src="../assets/person/7.jpeg"
-                                alt=""
+                                src={PF + "/person/3.jpeg"}
+                                alt="pci bro"
                             />
                         </div>
                         <div className="profileInfo">
